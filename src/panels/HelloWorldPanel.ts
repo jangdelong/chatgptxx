@@ -1,6 +1,6 @@
-import { Disposable, Webview, WebviewPanel, window, Uri, ViewColumn } from "vscode";
-import { getUri } from "../utilities/getUri";
-import { getNonce } from "../utilities/getNonce";
+import { Disposable, Webview, WebviewPanel, window, Uri, ViewColumn } from 'vscode';
+import { getUri } from '../utilities/getUri';
+import { getNonce } from '../utilities/getNonce';
 
 /**
  * This class manages the state and behavior of HelloWorld webview panels.
@@ -100,9 +100,9 @@ export class HelloWorldPanel {
    */
   private _getWebviewContent(webview: Webview, extensionUri: Uri) {
     // The CSS file from the Vue build output
-    const stylesUri = getUri(webview, extensionUri, ["webview-ui", "build", "assets", "index.css"]);
+    const stylesUri = getUri(webview, extensionUri, ['webview-ui', 'build', 'assets', 'index.css']);
     // The JS file from the Vue build output
-    const scriptUri = getUri(webview, extensionUri, ["webview-ui", "build", "assets", "index.js"]);
+    const scriptUri = getUri(webview, extensionUri, ['webview-ui', 'build', 'assets', 'index.js']);
 
     const nonce = getNonce();
 
@@ -139,7 +139,7 @@ export class HelloWorldPanel {
         const text = message.text;
 
         switch (command) {
-          case "hello":
+          case 'hello':
             // Code that should run in response to the hello message command
             window.showInformationMessage(text);
             return;

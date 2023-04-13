@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import { provideVSCodeDesignSystem, vsCodeButton } from "@vscode/webview-ui-toolkit";
-import { vscode } from "./utilities/vscode";
+import { provideVSCodeDesignSystem, vsCodeButton } from '@vscode/webview-ui-toolkit';
+import { vscode } from './utilities/vscode';
 
 // In order to use the Webview UI Toolkit web components they
 // must be registered with the browser (i.e. webview) using the
@@ -23,8 +23,8 @@ provideVSCodeDesignSystem().register(vsCodeButton());
 
 function handleHowdyClick() {
   vscode.postMessage({
-    command: "hello",
-    text: "Hey there partner! 🤠",
+    command: 'hello',
+    text: 'Hey there partner! 🤠',
   });
 }
 </script>
@@ -32,7 +32,7 @@ function handleHowdyClick() {
 <template>
   <main>
     <h1>Hello world!</h1>
-    <vscode-button @click="handleHowdyClick">Howdy!</vscode-button>
+    <vscode-button @click='handleHowdyClick'>Howdy!</vscode-button>
   </main>
 </template>
 
