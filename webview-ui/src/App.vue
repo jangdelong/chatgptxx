@@ -27,12 +27,21 @@ function handleHowdyClick() {
     text: 'Hey there partner! 🤠',
   });
 }
+
+function handleAddClick() {
+  vscode.postMessage({
+    command: 'add',
+    text: '确定要删除吗?',
+  });
+}
 </script>
 
 <template>
   <main>
     <h1>Hello world!</h1>
-    <vscode-button @click='handleHowdyClick'>Howdy!</vscode-button>
+    <vscode-button @click="handleHowdyClick">Howdy!</vscode-button>
+
+    <vscode-button @click="handleAddClick">删除</vscode-button>
   </main>
 </template>
 

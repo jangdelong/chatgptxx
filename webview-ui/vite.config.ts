@@ -12,13 +12,18 @@ export default defineConfig({
     }
   },
   build: {
-    outDir: "build",
+    outDir: 'build',
     rollupOptions: {
       output: {
-        entryFileNames: `assets/[name].js`,
-        chunkFileNames: `assets/[name].js`,
-        assetFileNames: `assets/[name].[ext]`,
+        entryFileNames: 'assets/[name].js',
+        chunkFileNames: 'assets/[name].js',
+        assetFileNames: 'assets/[name].[ext]',
       },
+    },
+    watch: {
+      buildDelay: 300,
+      include: ['src/**/*.(vue)|(ts)'],
+      // watch时也写入磁盘
     },
   },
 })
